@@ -1,0 +1,31 @@
+exe1: 
+altura = int(input("Qual a area?: "))
+largura = int(input("Qual a largura?: "))
+area = altura * largura
+print("A resposta é {}".format(area))
+
+exe2:
+pao = int(input("Quantos pães você quer?: "))
+sonho = int(input("E quantos sonhos?: "))
+valorpao = float(pao * 0.50)
+valorsonho = float(sonho * 2.00)
+valorfinal = valorpao + valorsonho
+print("{} pães mais {} sonhos, sai pelo valor total de R${}".format(pao, sonho, valorfinal))
+
+exe3:
+distancia = int(input("Quantos km você irá fazer?: "))
+preco = float(input("Qual o preço da gasolina?: "))
+carro = int(input("Quantos km o seu carro faz por litro? :"))
+fim = float((distancia / carro) * preco )
+print("Com o preço da gasolina de R${}, com seu carro fazendo {}km/l, a viagem de {}km vai sair pelo total de R${:.2f}. ".format(preco, carro, distancia, fim))
+
+exe4:
+altcm = int(input("Qual sua altura em centímetros?: "))
+altmetros = float(altcm / 100)
+print("Sua altura em metros é de {:.2f}m".format(altmetros))
+
+exe5:
+valor = float(input("Qual o valor do produto que você quer comprar?: "))
+desconto = float(valor * 0.15)
+valorfinal = float(valor * 0.85)
+print("O produto que queres comprar, que possui o valor de R${}, possui desconto de R${:.2f}, ficando pelo total de {:.2f}".format(valor, desconto, valorfinal))
