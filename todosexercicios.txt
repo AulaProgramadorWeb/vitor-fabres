@@ -1,0 +1,86 @@
+EXERCICIO 1 lista 2
+
+n1 = int(input("Qual o dividendo?: "))
+n2 = int(input("Qual o divisor?: "))
+div = float(n1 / n2)
+
+if div > 0:
+    print("O número {} dividido por {}, tem como resultado final {}".format(n1, n2, div))
+else:
+    print("Os números {} e {}, não são válidos")
+
+    //////////////////////////////////////////////////
+
+EXERCICIO 2
+
+sal = float(input("Qual seu salário base?: "))
+desc = sal*0.11
+final = sal - desc
+max = sal - 318.20
+if desc >= 318.20:
+    print("Com seu salário sendo de R${:.2f}, você chega no teto de desconto, sendo seu valor após os R$318.20 descontados de {:.2f}".format(sal, max))
+else:
+    print("Seu salário de R${:.2f}, sera de R${:.2f} após os R${:.2f} descontados".format(sal, final, desc))
+
+////////////////////////////////////////////////////
+
+EXERCICIO 3
+
+real = float(input("Qual o valor do real no dia de hoje?: "))
+dolar = float(input("Qual o valor do dolar no dia de hoje?: "))
+euro = float(input("Qual o valor do euro no dia de hoje?: "))
+opc1 = int(input("Qual a moeda que queres converter?:\n PRESSIONE [1] PARA REAL, PRESSIONE [2] PARA DOLAR, PRESSIONE [3] EURO? " ))
+opc2 = int(input("Para qual a moeda que vais converter?:\n PRESSIONE [1] PARA REAL, PRESSIONE [2] PARA DOLAR, PRESSIONE [3] PARA EURO: "))
+valor = float(input("Qual o valor que você deseja converter?: "))
+convreal = valor * real
+convdol = valor * dolar
+conveuro = valor * euro
+
+if opc1 == 1 and opc2 == 2:
+    print("O valor {} convertido de reais para dolar é igual á: {}".format(valor, convdol))
+elif opc1 == 1 and opc2 == 3:
+    print("O valor {} em reais convertidos para euro é igual á: {}".format(valor, conveuro))
+elif opc1 == 2 and opc2 == 1:
+    print("O valor {} em dolar, convertido para real é igual á: {}".format(valor, convreal))
+elif opc1 == 2 and opc2 == 3:
+    print("O valor {} convertido de dolar para euro é igual a: {}".format(valor, conveuro))
+elif opc1 == 3 and opc2 == 1:
+    print("O valor de {} euros convertido para reais é igual á: ".format(valor, convreal))
+elif opc1 == 3 and opc2 == 2:
+    print("O valor é em euro de {} convertidos para dolar é igual a: {}".format(valor, convdol))
+else:
+    print("Esta opção é inválida.")
+
+/////////////////////////////////////////////////////////////
+
+EXERCICIO 4
+
+idade = int(input("Qual a sua idade?: "))
+if idade < 5:
+    print ("Essa idade não possui categoria")
+elif idade >= 5 and idade < 8:
+    print ("A categoria desta idade é a Infantil A")
+elif idade >= 8 and idade < 11:
+    print("Está idade está dentro da categoria Infantil B")
+elif idade >= 11 and idade < 14:
+    print ("Você se caracteriza como Juvenil A")
+else:
+    print("Categoria Senior")
+
+//////////////////////////////////////////////////////////////////////////
+
+EXERCICIO EXTRA
+
+import random
+choice = str(input("Par ou impar? "))
+num = int(input("Escolha um número? "))
+computador = random.randint(1, 5)
+resposta = num - computador
+if choice == "Par" and resposta %2 == 1:
+    print("O computador escolheu {} e o IMPAR venceu!\n VOCÊ PERDEU".format(computador))
+elif choice == "Par" and resposta %2 == 1:
+    print("O computador escolheu {} e o PAR venceu!\n PARABÉNS VOCÊ FOI VITORIOSO".format(computador))
+elif choice == "Impar" and resposta %2 == 1:
+    print("O computador escolheu {} e o IMPAR venceu!\n VOCÊ VENCEU!".format(computador))
+else:
+    print("O computador escolheu {} e o PAR venceu!\n VOCÊ PERDEU!".format(computador))
